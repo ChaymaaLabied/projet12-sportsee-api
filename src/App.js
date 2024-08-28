@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import DailyActivityChart from "./Components/DailyActivityChart";
+import Header from "./Components/Header";
+import AverageSessionsChart from "./Components/AverageSessionsChart";
+import ActivityChart from "./Components/ActivityChart";
+import ScoreChart from "./Components/ScoreChart";
+import InfoCardsGroup from "./Components/InfoCardsGroup";
+import AsideNav from "./Components/AsideNav";
+import UserInfo from "./Components/UserInfo";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+return(
+  <div>
+    <Header></Header>
+    <UserInfo></UserInfo>
+    <DailyActivityChart></DailyActivityChart>
+    <AverageSessionsChart></AverageSessionsChart>
+    <ActivityChart></ActivityChart>
+    <ScoreChart></ScoreChart>
+    <InfoCardsGroup></InfoCardsGroup>
+    <AsideNav></AsideNav>
+  </div>
+)
 }
-
-export default App;
