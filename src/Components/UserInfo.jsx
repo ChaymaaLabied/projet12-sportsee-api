@@ -1,19 +1,22 @@
-import React from "react";
-import { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getGeneralInfo } from "../Api/server";
 
+export default function UserInfo() {
+  const [generaleInfos, setGeneraleInfos] = useState(null);
 
-export default function UserInfo(){
+  useEffect(() => {
+    getGeneralInfo(18)
+      .then((result) => {
+        setGeneraleInfos(result.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching general info:", error);
+      });
+  }, []); // Ajout de la dépendance vide pour n'exécuter qu'une seule fois
 
-    const [generaleInfos, setGeneraleInfos] = useState(null);
-    useEffect(()=>{
-        getGeneralInfo(12).then((result) => {
-            setGeneraleInfos(result.data);
-          });
-    })
-return(
-    <div>
-        <h2>Bonjour {generaleInfos.userInfos.firstName}</h2>
-    </div>
-)
+  if (!generaleInfos) {
+    return <div>Loading...</div>; // Afficher un message de chargement tant que les données ne sont pas disponibles
+  }
+
+  return <h1>Bonjour {generaleInfos.userInfos.firstName}</h1>;
 }

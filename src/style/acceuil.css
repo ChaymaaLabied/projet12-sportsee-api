@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: roboto, Arial, sans-serif;
+}
+
+#root {
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 20px 0px 5px 0px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.accueil {
+  margin: 0px 0px 0px 10%;
+  padding-left: 30px;
+  width: 80%;
+  height: 90vh;
+}
+.accueil .acceuil_MainData {
+  display: flex;
+  flex-direction: row;
+  width: 99%;
+  height: 70vh;
+}
+.accueil .acceuil_MainData .information-stat {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.nom {
+  color: rgb(255, 0, 0);
+}
+
+.Graphs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+}
+.Graphs .BoxOfGraphs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.radar {
+  background-color: rgb(40, 45, 48);
+  color: rgb(255, 255, 255);
+}
+
+.activity {
+  width: 610px;
+  height: 280px;
+}
+
+.objectif,
+.scoreWrap,
+.radar {
+  width: 200px;
+  height: 200px;
+}/*# sourceMappingURL=acceuil.css.map */
