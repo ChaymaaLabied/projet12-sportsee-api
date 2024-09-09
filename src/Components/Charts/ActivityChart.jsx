@@ -1,19 +1,14 @@
-import { useEffect, useState } from "react";
-import { getPerformance } from "../Api/server";
 import {
- RadarChart,PolarGrid,PolarAngleAxis,PolarRadiusAxis,Radar
+  PolarAngleAxis,
+  PolarGrid,
+  PolarRadiusAxis, Radar,
+  RadarChart
 } from "recharts";
 
-export default function ActivityChart() {
-    const [userPerformance, setUserPerformance] = useState();
+export default function ActivityChart({userPerformance}) {
+ 
 
-  useEffect(() => {
-    getPerformance(18).then((result) => {
-        setUserPerformance({
-          kinds: result.data.kind,
-          data: result.data.data,
-        });
-  })}, []);
+  
   return (
     <div
     className="col w-25"

@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { getActivity } from "../Api/server";
+
 import {
   BarChart,
   Legend,
@@ -10,19 +9,14 @@ import {
   Bar,
 } from "recharts";
 
-export default function DailyActivityChart() {
-  const [userActivity, setUserActivity] = useState([]);
+export default function DailyActivityChart({userActivity}) {
   const legendFormatter = (value) => {
     if (value === "kilogram") return "Poids (en Kg)";
     if (value === "calories") return "Calories brûlées (kCal)";
 
     return value;
   };
-  useEffect(() => {
-    getActivity(18).then((result) => {
-      setUserActivity(result.data.sessions);
-    });
-  }, []);
+
   return (
     <div className="DailyActivity-graph">
       <div>

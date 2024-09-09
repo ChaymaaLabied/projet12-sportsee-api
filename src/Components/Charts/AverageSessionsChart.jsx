@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { getAverageSessions } from "../Api/server";
 import {
   LineChart,
   Legend,
@@ -10,14 +8,7 @@ import {
   Line,
 } from "recharts";
 
-export default function AverageSessionsChart() {
-  const [userAverageSessions, setUserAverageSessions] = useState([]);
-
-  useEffect(() => {
-    getAverageSessions(18).then((result) => {
-      setUserAverageSessions(result.data.sessions);
-    });
-  }, []);
+export default function AverageSessionsChart({ userAverageSessions}) {
   return (
     <div className="col">
       <LineChart

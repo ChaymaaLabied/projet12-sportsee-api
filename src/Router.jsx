@@ -1,23 +1,26 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./src/Components/Layout";
-import App from "./src/Pages/App";
-import Home from "./src/Pages/Home"
-import Error from "./src/Pages/Error";
+import Layout from "./Components/Layout";
+import App from "./Pages/App";
+import Home from "./Pages/Home";
+import Error from "./Pages/Error";
+import userLoader from "./Loader/userLoader";
 
 export default function Router() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout />,
-      Children: [
-        {
-            path: "/user/id",
-            element: <App />,
-        },
+      children: [
         {
           index: true,
-          element: <Home/>,
+          element: <Home />,
+        },
+        {
+          path: "/user/:id",
+          element: <App />,
+          loader: userLoader,
+          errorElement: <Error/>
         },
         {
           path: "*",
