@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <h1>Bienvenue sur SportSee</h1>
       <nav aria-label="x">
           <ul className="nav">
@@ -27,6 +27,6 @@ export default function Home() {
             </li>
           </ul>
         </nav>
-    </div>
+    </>
   );
 }

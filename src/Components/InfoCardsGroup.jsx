@@ -25,7 +25,7 @@ export default function InfoCardsGroup({generaleInfos}){
       };
       
       return(
-        <div className="col-4">
+        < >
         {generaleInfos && (
           <>
             {Object.entries(generaleInfos.keyData).map((entry) => (
@@ -37,6 +37,6 @@ export default function InfoCardsGroup({generaleInfos}){
             ))}
           </>
         )}
-      </div>
+      </>
       )
 }
