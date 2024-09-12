@@ -22,19 +22,30 @@ h2 {
   font-weight: 400;
 }
 
-.accueil {
-  margin: 0px 0px 0px 10%;
+.Mainpage {
+  margin-left: 10%;
   padding-left: 30px;
   width: 80%;
   height: 90vh;
 }
-.accueil .acceuil_MainData {
+.Mainpage__Dashboard {
   display: flex;
   flex-direction: row;
-  width: 99%;
+  width: 100%;
   height: 70vh;
 }
-.accueil .acceuil_MainData .information-stat {
+.Mainpage__Dashboard--Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+}
+.Mainpage__Dashboard--Main .figures {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.Mainpage__Dashboard--Aside {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
@@ -44,20 +55,7 @@ h2 {
   color: rgb(255, 0, 0);
 }
 
-.Graphs {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 90%;
-}
-.Graphs .BoxOfGraphs {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.radar {
+.activityChart {
   background-color: rgb(40, 45, 48);
   color: rgb(255, 255, 255);
 }
@@ -67,9 +65,8 @@ h2 {
   height: 280px;
 }
 
-.objectif,
-.scoreWrap,
-.radar {
+.averageSessionsChart,
+.scoreChart, .activityChart {
   width: 200px;
   height: 200px;
 }/*# sourceMappingURL=acceuil.css.map */

@@ -1,0 +1,55 @@
+.information {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: rgb(251, 251, 251);
+  width: 220px;
+}
+.information img {
+  width: 20px;
+}
+.information .info-gramme {
+  font-size: 20px;
+  font-weight: 700;
+}
+.information .info-type {
+  font-size: 14px;
+  font-weight: 500;
+}
+.information--user--calories {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  border-radius: 6px;
+  justify-content: center;
+  background-color: rgba(255, 0, 0, 0.07);
+}
+.information--user--proteines {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  border-radius: 6px;
+  justify-content: center;
+  background-color: rgba(74, 184, 255, 0.1);
+}
+.information--user--glucides {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  border-radius: 6px;
+  justify-content: center;
+  background-color: rgba(249, 206, 35, 0.1);
+}
+.information--user--lipides {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  border-radius: 6px;
+  justify-content: center;
+  background-color: rgba(253, 81, 129, 0.1);
+}/*# sourceMappingURL=dashboard_aside.css.map */

@@ -1,42 +1,47 @@
 import React from "react";
 import InfoCard from "./InfoCard";
+// Importation des icônes
+import calorieIcon from "../assets/calorie.svg";
+import glucideIcon from "../assets/glucide.svg";
+import proteineIcon from "../assets/proteine.svg";
+import lipideIcon from "../assets/lipide.svg";
 
+export default function InfoCardsGroup({ generaleInfos }) {
 
-export default function InfoCardsGroup({generaleInfos}){
+  // Fonction pour mapper les labels, icônes et unités
+  const getKeyDataDetails = (entry) => {
+    switch (entry[0]) {
+      case "calorieCount":
+        return { label: "Calories", icon: calorieIcon, unit: "kCal" };
+      case "proteinCount":
+        return { label: "Proteines", icon: proteineIcon, unit: "g" };
+      case "carbohydrateCount":
+        return { label: "Glucides", icon: glucideIcon, unit: "g" };
+      case "lipidCount":
+        return { label: "Lipides", icon: lipideIcon, unit: "g" };
+      default:
+        return { label: "", icon: null, unit: "" };
+    }
+  };
 
-    const getKeyDataLabel = (entry) => {
-        switch (entry[0]) {
-          case "calorieCount":
-            return "Calories";
-          case "proteinCount":
-            return "Protéines";
-          case "carbohydrateCount":
-            return "Glucides";
-          case "lipidCount":
-            return "Lipides";
-          default:
-            return "";
-        }
-      };
-    // les unité du compo precedent juste avant celui la 
-      const getKeyDataUnit = (entry) => {
-        if (entry[0] === "calorieCount") return "kCal";
-        return "g";
-      };
-      
-      return(
-        < >
-        {generaleInfos && (
-          <>
-            {Object.entries(generaleInfos.keyData).map((entry) => (
+  return (
+    <>
+      {generaleInfos && (
+        <>
+          {Object.entries(generaleInfos.keyData).map((entry) => {
+            const { label, icon, unit } = getKeyDataDetails(entry);
+            return (
               <InfoCard
-                label={getKeyDataLabel(entry)}
+                key={entry[0]} // Ajoutez une clé pour chaque élément
+                label={label}
                 value={entry[1]}
-                unit={getKeyDataUnit(entry)}
+                unit={unit}
+                icon={icon} // Passez l'icône en tant que prop
               />
-            ))}
-          </>
-        )}
-      </>
-      )
+            );
+          })}
+        </>
+      )}
+    </>
+  );
 }

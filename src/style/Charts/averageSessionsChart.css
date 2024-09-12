@@ -1,0 +1,23 @@
+.custom-tooltip-objectif {
+  background-color: white;
+  color: black;
+  padding: 1px 10px;
+}
+
+.averageSessionsChart {
+  position: relative;
+}
+.averageSessionsChart h3 {
+  position: absolute;
+  width: 70%;
+  z-index: 2;
+  top: -10px;
+  right: 0;
+  left: 20px;
+  bottom: 100%;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.averageSessionsChart-responsive {
+  background-color: rgb(255, 0, 0);
+}/*# sourceMappingURL=averageSessionsChart.css.map */

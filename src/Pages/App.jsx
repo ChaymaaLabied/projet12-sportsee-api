@@ -10,27 +10,27 @@ import UserInfo from "../Components/UserInfo";
 // import "../style/acceuil.scss";
 
 export default function App() {
-  const { generalInfo, score, activity, averageSessions, perfomance } =
+  const { generalInfo, score, activity, averageSessions, performance } =
     useLoaderData();
-    console.log(activity)
+  console.log(activity);
 
   return (
     <>
-      <AsideNav/>
-      <div className="accueil">
-        <UserInfo generaleInfos={generalInfo}/>
+      <AsideNav />
+      <div className="Mainpage">
+        <UserInfo generaleInfos={generalInfo} />
         <h2>Félicitations ! Vous avez explosé vos objectifs hier 👏</h2>
-        <div className="acceuil_MainData">
-          <div className="Graphs">
-            <DailyActivityChart userActivity={activity}/>
-            <div className="BoxOfGraphs">
-              <ActivityChart userPerformance={perfomance} />
-              <AverageSessionsChart userAverageSessions={averageSessions}/>
-              <ScoreChart score={score}/>
+        <div className="Mainpage__Dashboard">
+          <div className="Mainpage__Dashboard--Main">
+            <DailyActivityChart userActivity={activity} />
+            <div className="figures">
+              <ActivityChart userPerformance={performance} />
+              <AverageSessionsChart userAverageSessions={averageSessions} />
+              <ScoreChart score={score} />
             </div>
           </div>
-          <div className="information-stat">
-            <InfoCardsGroup generaleInfos={generalInfo}/>
+          <div className="Mainpage__Dashboard--Aside">
+            <InfoCardsGroup generaleInfos={generalInfo} />
           </div>
         </div>
       </div>
