@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function UserInfo({generaleInfos}) {
-console.log(generaleInfos)
   if (!generaleInfos) {
     return <div>Loading...</div>; // Afficher un message de chargement tant que les données ne sont pas disponibles
   }

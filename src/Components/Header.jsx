@@ -1,20 +1,19 @@
-import logo from "../assets/logo.png"
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 import "../style/Header/Header.scss";
 
-
-function Header () {
+function Header() {
   return (
     <header>
       <nav>
         <img src={logo} alt='logo' />
-        <span> Accueil </span>
-        <span> Profil </span>
-        <span> Réglage </span>
-        <span className='communaute'> Communauté </span>
+        <Link to="/" className="acceuilLink">Accueil</Link> {/* Utiliser Link pour créer un lien */}
+        <span>Profil</span>
+        <span>Réglage</span>
+        <span className='communaute'>Communauté</span>
       </nav>
     </header>
-
-  )
+  );
 }
 
-export default Header
+export default Header;

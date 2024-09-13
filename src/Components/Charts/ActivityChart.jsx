@@ -6,11 +6,12 @@ import {
   RadarChart,
   Legend
 } from "recharts";
+import "../../style/Charts/activityChart.scss"
 
 export default function ActivityChart({ userPerformance }) {
   return (
     <div className="activityChart">
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="100%" >
         <RadarChart
           outerRadius={50}
           width="50%"

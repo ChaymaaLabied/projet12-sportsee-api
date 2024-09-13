@@ -37,13 +37,15 @@ h2 {
 .Mainpage__Dashboard--Main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 40px;
   width: 90%;
+  padding: 20px;
 }
 .Mainpage__Dashboard--Main .figures {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 30px;
 }
 .Mainpage__Dashboard--Aside {
   display: flex;
@@ -66,7 +68,8 @@ h2 {
 }
 
 .averageSessionsChart,
-.scoreChart, .activityChart {
+.scoreChart,
+.activityChart {
   width: 200px;
   height: 200px;
 }/*# sourceMappingURL=acceuil.css.map */

@@ -12,7 +12,7 @@ import UserInfo from "../Components/UserInfo";
 export default function App() {
   const { generalInfo, score, activity, averageSessions, performance } =
     useLoaderData();
-  console.log(activity);
+
 
   return (
     <>
