@@ -71,7 +71,7 @@ export default function DailyActivityChart({ userActivity }) {
             yAxisId="left" // Bind to the right-side Y-axis
           />
           <Bar
-            name="Calories brûlées (kCal)"
+            name={<span style={{ color: "black" }}>Calories brûlées (kCal)</span>}
             dataKey="calories"
             radius={[10, 10, 0, 0]}
             fill="#E60000"

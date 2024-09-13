@@ -10,7 +10,10 @@ body {
 
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 h1 {
   font-size: 48px;
@@ -18,12 +21,12 @@ h1 {
 }
 h2 {
   font-size: 18px;
-  font-weight: 400;
+  // font-weight: 400;
 }
 // Structure principale
 .Mainpage {
-  margin-left: 10%;
-  padding-left: $spacing-large;
+  margin-left: 5%;
+  // padding-left: $spacing-large;
   width: $main-width;
   height: $height-full;
 
@@ -31,20 +34,20 @@ h2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 70vh;
+    // height: 70vh;
+    margin-top: 3rem;
 
     &--Main {
       display: flex;
       flex-direction: column;
       gap: 40px;
       width: 90%;
-      padding: 20px;
+      // padding: 20px;
 
       .figures {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        gap: 30px;
       }
     }
 
@@ -61,10 +64,6 @@ h2 {
   color: $couleur-rouge;
 }
 
-.activityChart {
-  background-color: rgba(40, 45, 48, 1);
-  color: rgba(255, 255, 255, 1);
-}
 // cette classe nom utilisée
 .activity {
   width: 610px;
@@ -72,8 +71,8 @@ h2 {
 }
 
 .averageSessionsChart,
-.scoreChart,
-.activityChart {
-  width: 200px;
-  height: 200px;
+.scoreChart {
+  width: 19vw;
+  height: 19vw;
+  border-radius: 5px;
 }

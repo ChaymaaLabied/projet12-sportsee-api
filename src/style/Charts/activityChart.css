@@ -1,1 +1,11 @@
-/*# sourceMappingURL=activityChart.css.map */
+.activityChart {
+  background-color: rgb(40, 45, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px; /* Ajoute du padding autour du graphique */
+  box-sizing: border-box; /* Inclut le padding dans la taille totale */
+  width: 19vw;
+  height: 19vw;
+  border-radius: 5px;
+}/*# sourceMappingURL=activityChart.css.map */

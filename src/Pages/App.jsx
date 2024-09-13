@@ -13,7 +13,6 @@ export default function App() {
   const { generalInfo, score, activity, averageSessions, performance } =
     useLoaderData();
 
-
   return (
     <>
       <AsideNav />
@@ -24,8 +23,8 @@ export default function App() {
           <div className="Mainpage__Dashboard--Main">
             <DailyActivityChart userActivity={activity} />
             <div className="figures">
-              <ActivityChart userPerformance={performance} />
               <AverageSessionsChart userAverageSessions={averageSessions} />
+              <ActivityChart userPerformance={performance} />
               <ScoreChart score={score} />
             </div>
           </div>

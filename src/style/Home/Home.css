@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 7rem;
+}
+.nav__item {
+  color: #fff;
+  background-color: #e60000;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 20px;
+}
+.nav__item--link {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=Home.css.map */

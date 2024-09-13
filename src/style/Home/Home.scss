@@ -1,0 +1,19 @@
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+    &__item {
+        color: #fff;
+        background-color: #e60000;
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        border-radius: 20px;    
+        &--link {
+            text-decoration: none;
+            color: white;
+        }
+        }
+}
+
+
