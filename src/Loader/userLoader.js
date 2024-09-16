@@ -1,26 +1,11 @@
-import {
-  getActivity,
-  getAverageSessions,
-  getGeneralInfo,
-  getPerformance,
-} from "../Api/server";
+import { serverFetch } from "../Api/server";
 
 export default async function userLoader({ params }) {
   const { id } = params;
+  const { getGeneralInfo, getActivity, getAverageSessions, getPerformance } =
+    serverFetch(true);
 
   const generalInfo = (await getGeneralInfo(id)).data;
-  // const score = [
-  //   {
-  //     name: "",
-  //     uv: 100,
-  //     fill: "#ffffff",
-  //   },
-  //   {
-  //     name: "Score",
-  //     uv: generalInfo.score * 100,
-  //     fill: "#ff0000",
-  //   },
-  // ];
   const score = [
     {
       name: "",
@@ -33,7 +18,7 @@ export default async function userLoader({ params }) {
       fill: "#ff0000",
     },
   ];
-  
+
   const activity = (await getActivity(id)).data.sessions;
 
   const averageSessions = (await getAverageSessions(id)).data.sessions;

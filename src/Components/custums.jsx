@@ -11,6 +11,7 @@ export const CustomTooltipActivity = ({ active, payload }) => {
   return null
 }
 
+
 export const CustomTooltipObjectif = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (

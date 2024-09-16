@@ -6,6 +6,7 @@
 }
 .custom-legend-score-objectif {
   text-align: center;
+  color: rgb(116, 121, 140);
 }
 
 .scoreChart {
@@ -22,7 +23,7 @@
 }
 .scoreChart .recharts-legend-wrapper {
   position: absolute;
-  top: 20%;
+  top: 30%;
   right: 17.5%;
   bottom: 22% !important;
   left: 17.5% !important;
@@ -31,7 +32,7 @@
   border: none;
   border-radius: 50%;
   line-height: 18px;
-  background-color: white;
+  background-color: transparent;
   padding: 15px;
 }
 

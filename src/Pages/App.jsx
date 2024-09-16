@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData  } from "react-router-dom";
 import AsideNav from "../Components/AsideNav";
 import ActivityChart from "../Components/Charts/ActivityChart";
 import AverageSessionsChart from "../Components/Charts/AverageSessionsChart";
