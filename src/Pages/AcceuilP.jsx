@@ -7,9 +7,8 @@ import DailyActivityChart from "../Components/Charts/DailyActivityChart";
 import ScoreChart from "../Components/Charts/ScoreChart";
 import InfoCardsGroup from "../Components/InfoCardsGroup";
 import UserInfo from "../Components/UserInfo";
-// import "../style/acceuil.scss";
 
-export default function App() {
+export default function Acceuil() {
   const { generalInfo, score, activity, averageSessions, performance } =
     useLoaderData();
 

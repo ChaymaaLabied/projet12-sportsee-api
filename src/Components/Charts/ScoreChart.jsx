@@ -1,5 +1,5 @@
 import { RadialBarChart, RadialBar, ResponsiveContainer, Legend } from "recharts";
-import { CustomLegendScore } from "../custums"; // Assurez-vous que le chemin est correct
+import { CustomLegendScore } from "../customs"; // Assurez-vous que le chemin est correct
 import "../../style/Charts/scoreChart.scss";
 
 export default function ScoreChart({ score }) {

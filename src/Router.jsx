@@ -1,10 +1,10 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Components/Layout";
-import App from "./Pages/App";
 import Home from "./Pages/Home";
 import Error from "./Pages/Error";
 import userLoader from "./Loader/userLoader";
+import Acceuil from "./Pages/AcceuilP";
 
 export default function Router() {
   const router = createBrowserRouter([
@@ -18,7 +18,7 @@ export default function Router() {
         },
         {
           path: "/user/:id",
-          element: <App />,
+          element: <Acceuil />,
           loader: userLoader,
           errorElement: <Error/>
         },

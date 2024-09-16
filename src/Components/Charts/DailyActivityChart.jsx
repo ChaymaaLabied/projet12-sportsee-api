@@ -9,7 +9,7 @@ import {
   Bar,
 } from "recharts";
 import "../../style/Charts/dailyActivityChart.scss";
-import { CustomTooltipActivity } from "../custums";
+import { CustomTooltipActivity } from "../customs";
 
 export default function DailyActivityChart({ userActivity }) {
   const legendFormatter = (value) => {

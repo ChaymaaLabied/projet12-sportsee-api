@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "../../style/Charts/averageSessionsChart.scss";
-import { CustomTooltipObjectif , } from "../custums";
+import { CustomTooltipObjectif , } from "../customs";
 
 
 export default function AverageSessionsChart({ userAverageSessions }) {
