@@ -1,6 +1,6 @@
 .custom-legend-score {
     &-score {
-      font-size: 26px;
+      font-size: 3vh;
       font-weight: 700;
       text-align: center;
       margin: 0;
@@ -8,6 +8,10 @@
     &-objectif {
       text-align: center;
       color: rgba(116, 121, 140, 1);
+      width: 40%;
+      font-size: 1.75vh;
+      margin: auto;
+      padding: 0.5rem 2rem 0 2rem;
     }
   }
   
@@ -37,7 +41,4 @@
       padding: 15px;
     }
   }
-  .score-radial {
-    background-color: white;
-  }
-  
+ 

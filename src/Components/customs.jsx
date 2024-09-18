@@ -21,13 +21,21 @@ export const CustomTooltipLineChart = ({ active, payload }) => {
   return null;
 };
 
-export function CustomLegendScore(payload) {
+export function CustomLegendScore({ payload }) {
+  // Vérification que le payload contient les données nécessaires
+  // Utilise l'opérateur d'accès optionnel (?.) pour éviter les erreurs si une partie des données est manquante
+  // Utilise ?? pour définir une valeur par défaut de 0 si todayScore est undefined ou null
+  const todayScore = payload?.[1]?.payload?.todayScore ?? 0;
+
   return (
     <div className="custom-legend-score">
       <p className="custom-legend-score-score">
-        {payload?.payload[1]?.payload.todayScore}%
+        {todayScore}% 
       </p>
-      <p className="custom-legend-score-objectif"> de votre objectif</p>
+      <p className="custom-legend-score-objectif">
+        de votre objectif 
+      </p>
     </div>
   );
 }
+

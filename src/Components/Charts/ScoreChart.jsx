@@ -1,28 +1,28 @@
 import { RadialBarChart, RadialBar, ResponsiveContainer, Legend } from "recharts";
-import { CustomLegendScore } from "../customs"; // Assurez-vous que le chemin est correct
-import "../../style/Charts/scoreChart.scss";
+import { CustomLegendScore } from "../customs"; 
+import "../../style/Charts/scoreChart.scss"; 
 
 export default function ScoreChart({ score }) {
   return (
     <div className="scoreChart">
-      <h3> Score </h3>
+      <h3>Score</h3> 
       <ResponsiveContainer width="100%" height="100%">
         <RadialBarChart
-          startAngle={140}
-          endAngle={500}
-          cx="50%"
-          cy="50%"
-          innerRadius={70}
-          barSize={10}
-          outerRadius={120}
-          data={score}
+          startAngle={90} // Angle de départ 
+          endAngle={500} // Angle de fin 
+          cx="50%" // Position X du centre du graphique
+          cy="50%" // Position Y du centre du graphique
+          innerRadius="50%" // Rayon interne du graphique 
+          barSize={8} 
+          outerRadius="200%" // Rayon externe du graphique 
+          data={score} 
         >
           <RadialBar
-            cornerRadius="50%"
-            dataKey="todayScore" // Assurez-vous que le dataKey correspond à vos données
-            fill="#E60000"
+            cornerRadius="50%" // Coins arrondis des barres
+            dataKey="todayScore" // Clé des données à afficher
+            fill="#E60000" // Couleur de remplissage des barres
           />
-          <Legend content={<CustomLegendScore />} />
+          <Legend content={<CustomLegendScore />} /> 
         </RadialBarChart>
       </ResponsiveContainer>
     </div>
