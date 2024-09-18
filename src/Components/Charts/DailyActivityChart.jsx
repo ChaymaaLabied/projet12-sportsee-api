@@ -12,49 +12,47 @@ import "../../style/Charts/dailyActivityChart.scss";
 import { CustomTooltipActivity } from "../customs";
 
 export default function DailyActivityChart({ userActivity }) {
-  const legendFormatter = (value) => {
-    if (value === "kilogram") return "Poids (en Kg)";
-    if (value === "calories") return "Calories brûlées (kCal)";
-    return value;
-  };
-
-  // Transform data to include a new field `dayIndex`
+  // Ajouter un index de jour pour chaque entrée de données
   const data = userActivity.map((elt, idx) => ({
     ...elt,
-    dayIndex: idx + 1, // Indexing from 1 to 7
+    dayIndex: idx + 1, // Les jours sont indexés de 1 à 7
   }));
+
+  // Propriétés communes pour les barres
+  const commonBarProps = {
+    barSize: 7,
+    barGap: 4,
+    barCategoryGap: 3,
+  };
 
   return (
     <div className="dailyActivityChart">
       <h3> Activité quotidienne </h3>
       <ResponsiveContainer width="100%" height={250}>
-        <BarChart
-          data={data}
-          barSize={7}
-          barGap={4}
-          barCategoryGap={3}
-        >
+        <BarChart data={data} {...commonBarProps}>
+          {/* Positionne la légende en haut à droite */}
           <Legend
             verticalAlign="top"
             align="right"
             iconType="circle"
             wrapperStyle={{ marginTop: "-23px" }}
-            formatter={legendFormatter}
           />
+          {/* Grille du graphique en pointillé sans lignes verticales */}
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
-          <XAxis
-            dataKey="dayIndex" // Use the new `dayIndex` key
-            tickLine={false}
-            axisLine={false}
-            tickFormatter={(value) => `${value}`} // Ensure the ticks are formatted as numbers
-          />
+
+          {/* Axe X montrant les jours indexés */}
+          <XAxis dataKey="dayIndex" tickLine={false} axisLine={false} />
+
+          {/* Premier axe Y à droite pour le poids */}
           <YAxis
             yAxisId="left"
             tickLine={false}
             axisLine={false}
-            orientation="right" // Set the axis to be on the right
-            domain={['dataMin - 1', 'dataMax + 1']}
+            orientation="right"
+            domain={["dataMin - 1", "dataMax + 1"]}
           />
+
+          {/* Deuxième axe Y (caché) pour les calories */}
           <YAxis
             yAxisId="right"
             tickLine={false}
@@ -62,24 +60,31 @@ export default function DailyActivityChart({ userActivity }) {
             orientation="right"
             hide
           />
+
+          {/* Personnalisation de l'affichage des données dans l'infobulle */}
           <Tooltip content={<CustomTooltipActivity />} />
+
+          {/* Barres pour le poids */}
           <Bar
-            name="Poids (kg)"
+            name={<span style={{ color: "#74798C" }}>Poids (kg)</span>}
             dataKey="kilogram"
             radius={[10, 10, 0, 0]}
             fill="#282D30"
-            yAxisId="left" // Bind to the right-side Y-axis
+            yAxisId="left"
           />
+
+          {/* Barres pour les calories brûlées */}
           <Bar
-            name={<span style={{ color: "black" }}>Calories brûlées (kCal)</span>}
+            name={
+              <span style={{ color: "#74798C" }}>Calories brûlées (kCal)</span>
+            }
             dataKey="calories"
             radius={[10, 10, 0, 0]}
             fill="#E60000"
-            yAxisId="right" // Bind to the right-side Y-axis
+            yAxisId="right"
           />
         </BarChart>
       </ResponsiveContainer>
     </div>
   );
 }
-
