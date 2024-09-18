@@ -1,12 +1,12 @@
 @import "../variables.scss";
 
 .custom-tooltip-activity {
-  background-color: red;
-  color: white;
+  background-color: $couleur-rouge;
+  color: $couleur-texte-header;
   padding: 10px;
 }
 .dailyActivityChart {
-  background-color: rgba(251, 251, 251, 1);
+  background-color: $couleur-texte-header;
   padding: 50px 20px 0px 0px;
   position: relative;
   h3 {
