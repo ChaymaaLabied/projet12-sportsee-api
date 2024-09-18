@@ -10,10 +10,10 @@ export const CustomTooltipActivity = ({ active, payload }) => {
   return null;
 };
 
-export const CustomTooltipObjectif = ({ active, payload }) => {
+export const CustomTooltipLineChart = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="custom-tooltip-objectif">
+      <div className="custom-tooltip-LineChart">
         <p> {`${payload[0].value} min`}</p>
       </div>
     );
