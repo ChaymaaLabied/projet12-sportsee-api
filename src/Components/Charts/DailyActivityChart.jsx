@@ -41,7 +41,12 @@ export default function DailyActivityChart({ userActivity }) {
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
 
           {/* Axe X montrant les jours indexés */}
-          <XAxis dataKey="dayIndex" tickLine={false} axisLine={false} />
+          <XAxis
+            dataKey="dayIndex"
+            tickLine={false}
+            axisLine={false}
+            tick={{ fill: "rgba(155, 158, 172, 1)" }}
+          />
 
           {/* Premier axe Y à droite pour le poids */}
           <YAxis
@@ -50,6 +55,7 @@ export default function DailyActivityChart({ userActivity }) {
             axisLine={false}
             orientation="right"
             domain={["dataMin - 1", "dataMax + 1"]}
+            tick={{ fill: "rgba(155, 158, 172, 1)" }}
           />
 
           {/* Deuxième axe Y (caché) pour les calories */}
