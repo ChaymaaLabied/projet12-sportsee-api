@@ -1,0 +1,52 @@
+@import "../variables.scss";
+
+// Mixin pour les éléments utilisateur avec couleur dynamique
+@mixin user-info-block($bg-color) {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  border-radius: 6px;
+  justify-content: center;
+  background-color: $bg-color;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 4rem;
+  background-color: $couleur-fond-info;
+  width: 220px;
+
+  img {
+    width: 20px;
+  }
+
+  .info-gramme {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .info-type {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &--user {
+    &--calories {
+      @include user-info-block(
+        $couleur-rouge-fond
+      ); // Utilisation du mixin avec couleur spécifique
+    }
+    &--proteines {
+      @include user-info-block($couleur-bleu-fond);
+    }
+    &--glucides {
+      @include user-info-block($couleur-jaune-fond);
+    }
+    &--lipides {
+      @include user-info-block($couleur-rose-fond);
+    }
+  }
+}

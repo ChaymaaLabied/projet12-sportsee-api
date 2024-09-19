@@ -4,13 +4,13 @@
   gap: 7rem;
 }
 .nav__item {
-  color: #fff;
-  background-color: #e60000;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
   padding: 1rem 3rem;
   font-size: 2rem;
   border-radius: 20px;
 }
 .nav__item--link {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=Home.css.map */

@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/dashboard_aside.scss";
+import "../style/dashboard_Aside/dashboard_aside.scss";
 
 export default function InfoCard({ label, icon, value, unit }) {
   return (
@@ -8,7 +8,7 @@ export default function InfoCard({ label, icon, value, unit }) {
         <img src={icon} alt={label} />
       </div>
       <div>
-        {unit === 'kCal' ? (
+        {unit === "kCal" ? (
           <p className="info-gramme">{value}kCal</p>
         ) : (
           <p className="info-gramme">{value}g</p>

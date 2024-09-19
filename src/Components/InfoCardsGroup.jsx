@@ -7,7 +7,6 @@ import proteineIcon from "../assets/proteine.svg";
 import lipideIcon from "../assets/lipide.svg";
 
 export default function InfoCardsGroup({ generaleInfos }) {
-
   // Fonction pour mapper les labels, icônes et unités
   const getKeyDataDetails = (entry) => {
     switch (entry[0]) {

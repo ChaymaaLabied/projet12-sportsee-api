@@ -20,7 +20,7 @@ export default function Router() {
           path: "/user/:id",
           element: <Acceuil />,
           loader: userLoader,
-          errorElement: <Error/>
+          errorElement: <Error />,
         },
         {
           path: "*",

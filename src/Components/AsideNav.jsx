@@ -13,7 +13,7 @@ function AsideNav () {
         <div className="Item"><img src={cyclisme} alt='cyclisme' /></div>
         <div className="Item"><img src={musculation} alt='musculation' /></div>
       </nav>
-      <p> Copiryght, SportSee 2020 </p>
+      <p> Copyright, SportSee 2020 </p>
     </div>
   )
 }

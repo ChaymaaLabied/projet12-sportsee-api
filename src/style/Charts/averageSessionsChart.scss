@@ -7,6 +7,10 @@
 }
 .averageSessionsChart {
   position: relative;
+  width: 19vw;
+  height: 19vw;
+  border-radius: 5px;
+
   h3 {
     position: absolute;
     width: 70%;
@@ -19,6 +23,6 @@
   }
 }
 .LineChart-responsive {
-  background-color:$couleur-rouge;
+  background-color: $couleur-rouge;
   border-radius: 6px;
 }

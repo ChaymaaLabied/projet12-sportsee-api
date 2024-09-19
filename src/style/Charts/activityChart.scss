@@ -1,15 +1,14 @@
-
 .activityChart {
-    background-color: rgba(40, 45, 48, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3px; /* Ajoute du padding autour du graphique */
-    box-sizing: border-box; /* Inclut le padding dans la taille totale */
-    width: 19vw;
-    height: 19vw;
-    border-radius: 5px;
-  }
-  .polar-angle-axis {
-    font-size:0.82vw;
-  }
+  background-color: rgba(40, 45, 48, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px; /* Ajoute du padding autour du graphique */
+  box-sizing: border-box; /* Inclut le padding dans la taille totale */
+  width: 19vw;
+  height: 19vw;
+  border-radius: 5px;
+}
+.polar-angle-axis {
+  font-size: 0.82vw;
+}

@@ -6,11 +6,14 @@ function Header() {
   return (
     <header>
       <nav>
-        <img src={logo} alt='logo' />
-        <Link to="/" className="acceuilLink">Accueil</Link> {/* Utiliser Link pour créer un lien */}
+        <img src={logo} alt="logo" />
+        <Link to="/" className="acceuilLink">
+          Accueil
+        </Link>{" "}
+        {/* Utiliser Link pour créer un lien */}
         <span>Profil</span>
         <span>Réglage</span>
-        <span className='communaute'>Communauté</span>
+        <span className="communaute">Communauté</span>
       </nav>
     </header>
   );

@@ -8,4 +8,8 @@
   width: 19vw;
   height: 19vw;
   border-radius: 5px;
+}
+
+.polar-angle-axis {
+  font-size: 0.82vw;
 }/*# sourceMappingURL=activityChart.css.map */

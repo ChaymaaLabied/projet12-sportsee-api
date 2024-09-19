@@ -1,15 +1,11 @@
-.bar {
-  padding: 30px;
-}
-
 .custom-tooltip-activity {
-  background-color: red;
-  color: white;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 10px;
 }
 
 .dailyActivityChart {
-  background-color: rgb(251, 251, 251);
+  background-color: rgb(255, 255, 255);
   padding: 50px 20px 0px 0px;
   position: relative;
 }
@@ -18,7 +14,4 @@
   top: 20px;
   left: 20px;
   font-size: 15px;
-}
-.dailyActivityChart .text-color {
-  color: rgb(116, 121, 140);
 }/*# sourceMappingURL=dailyActivityChart.css.map */

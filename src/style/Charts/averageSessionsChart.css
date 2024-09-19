@@ -1,11 +1,14 @@
-.custom-tooltip-objectif {
-  background-color: white;
+.custom-tooltip-LineChart {
+  background-color: rgb(255, 255, 255);
   color: black;
   padding: 1px 10px;
 }
 
 .averageSessionsChart {
   position: relative;
+  width: 19vw;
+  height: 19vw;
+  border-radius: 5px;
 }
 .averageSessionsChart h3 {
   position: absolute;
@@ -18,7 +21,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.objectif-responsive {
+.LineChart-responsive {
   background-color: rgb(255, 0, 0);
   border-radius: 6px;
 }/*# sourceMappingURL=averageSessionsChart.css.map */

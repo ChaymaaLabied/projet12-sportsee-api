@@ -25,7 +25,7 @@ export const serverFetch = (isMock) => {
         return { data: user };
       },
       getAverageSessions: async (userId) => {
-        const response = await fetch("/mocks/userAverageSessionsMock.json"); // Chemin corrigé
+        const response = await fetch("/mocks/userAverageSessionsMock.json"); 
         const result = await response.json();
         const user = result.find(findUser(userId));
         
