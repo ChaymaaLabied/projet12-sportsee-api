@@ -1,18 +1,28 @@
 import {
-  LineChart,
   Legend,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  Tooltip,
-  Line,
-  ResponsiveContainer,
 } from "recharts";
 import "../../style/Charts/averageSessionsChart.scss";
-import { CustomTooltipLineChart } from "../customs";
 
 export default function AverageSessionsChart({ userAverageSessions }) {
   // Tableau pour mapper les nombres 1 à 7 aux lettres des jours de la semaine
+
   const daysOfWeek = ["L", "M", "M", "J", "V", "S", "D"];
+  const renderTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip-LineChart">
+          <p> {`${payload[0].value} min`}</p>
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
     <div className="averageSessionsChart">
@@ -56,7 +66,7 @@ export default function AverageSessionsChart({ userAverageSessions }) {
             axisLine={false} // Masque la ligne de l'axe
             hide // Cache l'axe des Y
           />
-          <Tooltip content={<CustomTooltipLineChart />} />
+          <Tooltip content={renderTooltip} />
           <Legend />
           <Line
             type="natural" // Type de courbe pour la ligne

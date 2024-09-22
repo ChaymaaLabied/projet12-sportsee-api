@@ -1,15 +1,14 @@
 import {
+  Bar,
   BarChart,
-  Legend,
   CartesianGrid,
+  Legend,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  Bar,
 } from "recharts";
 import "../../style/Charts/dailyActivityChart.scss";
-import { CustomTooltipActivity } from "../customs";
 
 export default function DailyActivityChart({ userActivity }) {
   // Ajouter un index de jour pour chaque entrée de données
@@ -23,6 +22,18 @@ export default function DailyActivityChart({ userActivity }) {
     barSize: 7,
     barGap: 4,
     barCategoryGap: 3,
+  };
+
+  const renderTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip-activity">
+          <p> {`${payload[0].value}kg`}</p>
+          <p> {`${payload[1].value}kCal`}</p>
+        </div>
+      );
+    }
+    return null;
   };
 
   return (
@@ -68,7 +79,7 @@ export default function DailyActivityChart({ userActivity }) {
           />
 
           {/* Personnalisation de l'affichage des données dans l'infobulle */}
-          <Tooltip content={<CustomTooltipActivity />} />
+          <Tooltip content={renderTooltip} />
 
           {/* Barres pour le poids */}
           <Bar
