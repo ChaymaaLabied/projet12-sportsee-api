@@ -3,7 +3,7 @@ import { serverFetch } from "../Api/server";
 export default async function userLoader({ params }) {
   const { id } = params;
   const { getGeneralInfo, getActivity, getAverageSessions, getPerformance } =
-    serverFetch(false);
+    serverFetch();
 
   const generalInfo = (await getGeneralInfo(id)).data;
   const score = [
