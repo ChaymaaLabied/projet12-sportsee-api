@@ -1,13 +1,21 @@
 import {
-  RadialBarChart,
-  RadialBar,
-  ResponsiveContainer,
   Legend,
+  RadialBar,
+  RadialBarChart,
+  ResponsiveContainer,
 } from "recharts";
-import { CustomLegendScore } from "../customs";
 import "../../style/Charts/scoreChart.scss";
 
 export default function ScoreChart({ score }) {
+  const renderLegend = ({ payload }) => {
+    const todayScore = payload?.[1]?.payload?.todayScore ?? 0;
+    return (
+      <div className="custom-legend-score">
+        <p className="custom-legend-score-score">{todayScore}%</p>
+        <p className="custom-legend-score-objectif">de votre objectif</p>
+      </div>
+    );
+  };
   return (
     <div className="scoreChart">
       <h3>Score</h3>
@@ -27,7 +35,7 @@ export default function ScoreChart({ score }) {
             dataKey="todayScore" // Clé des données à afficher
             fill="#E60000" // Couleur de remplissage des barres
           />
-          <Legend content={<CustomLegendScore />} />
+          <Legend content={renderLegend} />
         </RadialBarChart>
       </ResponsiveContainer>
     </div>

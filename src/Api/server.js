@@ -2,10 +2,12 @@ import axios from "axios";
 
 const BASE_URL = "http://localhost:3000";
 
-export const serverFetch = (isMock) => {
+export const serverFetch = () => {
   const findUser = (userId) => (user) => user.userId === parseInt(userId);
 
-  if (isMock) {
+  const isMock = process.env.REACT_APP_IS_MOCK;
+
+  if (isMock === "true") {
     return {
       getGeneralInfo: async (userId) => {
         const response = await fetch("/mocks/userInfoMock.json");
@@ -14,28 +16,28 @@ export const serverFetch = (isMock) => {
         if (user && user.todayScore) {
           user.score = user.todayScore;
         }
-        
+
         return { data: user };
       },
       getActivity: async (userId) => {
         const response = await fetch("/mocks/userActivitiesMock.json");
         const result = await response.json();
         const user = result.find(findUser(userId));
-        
+
         return { data: user };
       },
       getAverageSessions: async (userId) => {
-        const response = await fetch("/mocks/userAverageSessionsMock.json"); 
+        const response = await fetch("/mocks/userAverageSessionsMock.json");
         const result = await response.json();
         const user = result.find(findUser(userId));
-        
+
         return { data: user };
       },
       getPerformance: async (userId) => {
         const response = await fetch("/mocks/userPerformanceMock.json");
         const result = await response.json();
         const user = result.find(findUser(userId));
-        
+
         return { data: user };
       },
     };
@@ -54,11 +56,11 @@ export const serverFetch = (isMock) => {
       return (await axios.get(`${BASE_URL}/user/${userId}/activity`)).data;
     },
     getAverageSessions: async (userId) => {
-      return (await axios.get(`${BASE_URL}/user/${userId}/average-sessions`)).data;
+      return (await axios.get(`${BASE_URL}/user/${userId}/average-sessions`))
+        .data;
     },
     getPerformance: async (userId) => {
       return (await axios.get(`${BASE_URL}/user/${userId}/performance`)).data;
     },
   };
 };
-
